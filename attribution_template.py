@@ -107,6 +107,9 @@ def calc_avg_CAC(channel_allocation_f, channel_spend_f):
 
 def calc_marginal_CAC(n_conversions_low_tier, spend_low_tier, n_conversions_high_tier, spend_high_tier):
     ##### fill in this code to create the three variables in output dictionary
+    marginal_conversions = n_conversions_high_tier - n_conversions_low_tier
+    marginal_spend = spend_high_tier - spend_low_tier
+    marginal_CAC = marginal_spend / marginal_conversions
     return {'marginal_conversions': marginal_conversions, 'marginal_spend': marginal_spend,
             'marginal_CAC': marginal_CAC}
 
